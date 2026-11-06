@@ -1,0 +1,179 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>$WICK · The coin with a working product behind it</title><meta name="description" content="$WICK is the community token of Wick, the app that runs a trading strategy on your own broker account and posts every trade to a public record before the result."><style>@font-face{font-family:Mona;src:url(fonts/mona-sans-latin-standard-normal.woff2) format('woff2');font-weight:200 900;font-stretch:75% 125%;font-display:swap}
+@font-face{font-family:Mona;src:url(fonts/mona-sans-latin-standard-italic.woff2) format('woff2');font-weight:200 900;font-stretch:75% 125%;font-style:italic;font-display:swap}
+@font-face{font-family:JBM;src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:JBM;src:url(fonts/jetbrains-mono-latin-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.mk{display:block;height:1em;width:auto}
+.ic{display:block;flex:none}
+.wrap{width:min(1200px,100% - 64px);margin-inline:auto}
+@media (max-width:760px){.wrap{width:calc(100% - 32px)}}
+details summary{list-style:none;cursor:pointer}
+details summary::-webkit-details-marker{display:none}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+:root{--bg:#09090A;--panel:#121214;--panel2:#18181B;--line:rgba(240,234,222,.12);--ink:#F1ECE2;--mute:#9C968B;--gold:#E2B04A;--gold2:#F3CF7A;--on:#120E05}
+body{background:var(--bg);color:var(--ink);font-family:Mona,sans-serif;font-size:17px;line-height:1.55}
+.eyebrow{font-family:JBM;font-weight:700;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+h1,h2,h3{font-weight:800;font-stretch:112%;letter-spacing:-.03em;line-height:1}
+h2{font-size:clamp(36px,4.4vw,62px);margin-top:18px;max-width:14ch}
+h3{font-size:21px;font-stretch:105%;letter-spacing:-.015em;line-height:1.15}
+.lead{color:var(--mute);font-size:18px;max-width:52ch;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 24px;border-radius:999px;font-weight:700;font-size:16px;white-space:nowrap;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.gold{background:var(--gold);color:var(--on)}
+.btn.ghost{border:1.5px solid var(--line);color:var(--ink)}
+.chip{font-family:JBM;font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--mute)}
+.chip.done{background:var(--gold);border-color:var(--gold);color:var(--on)}
+.chip.live{border-color:var(--gold);color:var(--gold)}
+/* nav */
+.nav{position:absolute;top:0;left:0;right:0;z-index:20}
+.nav-in{height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;font-size:26px}
+.logo .mk{height:22px;color:var(--ink)}
+.logo b{font-weight:800;font-stretch:105%;letter-spacing:-.03em}
+.tk{font-family:JBM;font-weight:700;font-size:11.5px;letter-spacing:.12em;color:var(--gold);border:1px solid rgba(226,176,74,.45);border-radius:999px;padding:4px 9px;margin-left:4px}
+.links{display:flex;gap:30px;font-size:15px;color:var(--mute);font-weight:500}
+.links a:hover{color:var(--ink)}
+.nav-cta{height:44px;padding:0 18px;font-size:14.5px;background:var(--ink);color:var(--bg)}
+/* hero */
+.hero{background:#000;position:relative;min-height:min(100vh,900px);display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:28px;overflow:hidden}
+.hero-art{position:absolute;inset:0}
+.hero-art img{width:100%;height:100%;object-fit:cover;object-position:62% 55%}
+.hero-in{position:relative;flex:1;display:flex;align-items:center;padding-top:110px}
+.hero-copy{max-width:600px}
+.hero h1{font-size:clamp(46px,6.2vw,92px);letter-spacing:-.04em;line-height:.95;margin-top:22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{font-size:18.5px;color:#B3AC9F;margin-top:24px;max-width:25em}
+.ctas{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.ca{margin-top:28px;display:flex;align-items:center;gap:14px;height:56px;padding:0 8px 0 20px;border-radius:16px;background:rgba(20,20,22,.78);border:1px solid var(--line);max-width:460px;backdrop-filter:blur(6px)}
+.ca-l{font-family:JBM;font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.ca-v{font-family:JBM;font-weight:500;font-size:14px;color:var(--ink);flex:1}
+.ca-b{width:42px;height:42px;border-radius:12px;background:var(--panel2);display:grid;place-items:center;color:var(--gold)}
+.ca-b.nudge{animation:nudge .5s}
+@keyframes nudge{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.facts{position:relative;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:56px}
+.fact{padding:22px 0 6px;display:flex;flex-direction:column;gap:6px}
+.fact+.fact{padding-left:28px;border-left:1px solid var(--line)}
+.fact span{font-family:JBM;font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.fact b{font-size:22px;font-weight:700;font-stretch:108%;letter-spacing:-.02em}
+/* sections */
+.sec{padding:130px 0}
+.trk{border-top:1px solid var(--line)}
+.bar{height:3px;background:var(--line);margin-top:56px;border-radius:3px}
+.bar i{display:block;height:100%;width:62%;background:var(--gold);border-radius:3px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:28px}
+.st-top{display:flex;align-items:center;justify-content:space-between}
+.st-n{font-family:JBM;font-weight:700;font-size:13px;color:var(--mute)}
+.step h3{margin-top:22px}
+.step p{color:var(--mute);font-size:15.5px;margin-top:10px}
+.step.soon h3{color:var(--mute)}
+.why{background:var(--panel)}
+.why-in{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:start}
+.why-head{position:sticky;top:40px}
+.why-row{display:grid;grid-template-columns:56px 1fr;gap:6px 18px;padding:34px 0;border-top:1px solid var(--line)}
+.why-row:last-child{border-bottom:1px solid var(--line)}
+.why-n{font-family:JBM;font-weight:700;color:var(--gold);font-size:14px;padding-top:4px}
+.why-ic{display:none}
+.why-row h3{font-size:26px}
+.why-row p{color:var(--mute);margin-top:10px;max-width:46ch}
+.pnl-in{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.pts{list-style:none;margin-top:30px;display:grid;gap:14px}
+.pts li{display:flex;align-items:center;gap:12px;font-weight:600}
+.pts .ic{color:var(--gold)}
+.pnl-wide{width:100%;border-radius:22px;box-shadow:0 40px 80px -40px rgba(0,0,0,.9)}
+.pnl-pair{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-top:16px;align-items:start}
+.pnl-pair img{border-radius:16px;width:100%}
+.pnl-pair .pnl-port{border-radius:22px}
+.note{font-family:JBM;font-size:12px;color:var(--mute);margin-top:16px;letter-spacing:.04em}
+.masc-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:32px;padding:56px 64px;overflow:hidden}
+.masc-art img{height:440px;width:auto;margin:-20px auto -56px}
+.masc h2{max-width:12ch}
+.tok-in{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.tok-table{margin-top:34px;border-top:1px solid var(--line)}
+.tok-row{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.tok-row span{font-weight:600;font-size:18px}
+.tok-row b{display:flex;align-items:center;gap:8px;font-family:JBM;font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--gold)}
+.tok-art img{width:100%;max-width:440px;margin-inline:auto;filter:drop-shadow(0 50px 50px rgba(0,0,0,.7))}
+.buy{background:var(--panel)}
+.buy-g{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.buy-c{background:var(--panel2);border:1px solid var(--line);border-radius:24px;padding:26px}
+.buy-top{display:flex;justify-content:space-between;align-items:center;color:var(--gold)}
+.buy-n{font-weight:800;font-stretch:115%;font-size:40px;line-height:1;color:var(--ink)}
+.buy-c h3{margin-top:44px}
+.buy-c p{color:var(--mute);font-size:15.5px;margin-top:10px}
+.warn{margin-top:22px;display:flex;align-items:center;gap:12px;padding:16px 20px;border-radius:16px;border:1px solid rgba(226,176,74,.35);color:#E9D6AE;font-size:15.5px}
+.warn .ic{color:var(--gold)}
+.camp-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+.camp-c{border:1px solid var(--line);border-radius:28px;padding:34px;background:var(--panel)}
+.camp-top{display:flex;justify-content:space-between;align-items:center;color:var(--gold)}
+.camp-k{display:block;margin-top:40px;font-family:JBM;font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.camp-c h3{font-size:32px;margin-top:10px}
+.camp-c p{color:var(--mute);margin-top:12px;max-width:44ch}
+.lnk{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-weight:700;color:var(--ink);border-bottom:1.5px solid var(--gold);padding-bottom:4px}
+.soc-row{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn.soc{border:1.5px solid var(--line);height:56px;padding:0 26px}
+.btn.soc:first-child{background:var(--gold);border-color:var(--gold);color:var(--on)}
+.faq{border-top:1px solid var(--line)}
+.faq-in{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+.q{border-top:1px solid var(--line)}
+.q:last-child{border-bottom:1px solid var(--line)}
+.q summary{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-weight:700;font-size:20px;font-stretch:104%}
+.q summary .ic{color:var(--gold);transition:transform .2s}
+.q[open] summary .ic{transform:rotate(45deg)}
+.q p{color:var(--mute);padding:0 0 26px;max-width:60ch}
+.foot{border-top:1px solid var(--line);padding:56px 0 40px}
+.foot-top{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap;color:var(--mute);font-size:15px}
+.disc{color:var(--mute);font-size:13.5px;max-width:80ch;margin-top:36px}
+.foot-bot{display:flex;justify-content:space-between;margin-top:28px;color:#6E695F;font-size:13px;gap:20px;flex-wrap:wrap}
+@media (max-width:980px){
+ .links{display:none}
+ .why-in,.pnl-in,.tok-in,.faq-in{grid-template-columns:1fr;gap:40px}
+ .why-head{position:static}
+ .steps,.buy-g{grid-template-columns:1fr 1fr}
+ .masc-in{grid-template-columns:1fr;padding:40px 28px 0}
+ .masc-art{order:2}.masc-art img{height:360px;margin:0 auto}
+ .tok-art img{max-width:300px}
+}
+@media (max-width:760px){
+ body{font-size:16px}
+ .nav{position:absolute}
+ .nav-in{height:72px}
+ .logo{font-size:22px}.logo .mk{height:19px}
+ .nav-cta{height:40px;padding:0 14px;font-size:13.5px}
+ .hero{min-height:0;padding-bottom:12px}
+ .hero-art{position:relative;height:auto;aspect-ratio:1/1;margin-top:72px}
+ .hero-art img{object-position:69% 60%}
+ .hero-in{padding-top:22px;margin-top:0}
+ .hero h1{font-size:44px}
+ .hero .lead{font-size:16.5px;max-width:none}
+ .btn{height:50px;padding:0 20px;font-size:15px}
+ .ctas .btn{flex:1;justify-content:center}
+ .ca{max-width:none}
+ .facts{grid-template-columns:1fr 1fr;margin-top:36px}
+ .fact:nth-child(3){padding-left:0;border-left:0}
+ .fact:nth-child(n+3){border-top:1px solid var(--line)}
+ .fact b{font-size:19px}
+ .sec{padding:84px 0}
+ .steps,.buy-g,.camp-g{grid-template-columns:1fr}
+ .bar{display:none}
+ .step{padding:22px 0;border-top:1px solid var(--line)}
+ .steps{gap:0}
+ .why-row h3{font-size:22px}
+ .pnl-pair{grid-template-columns:1fr 1fr;gap:10px}
+ .camp-c{padding:26px}
+ .camp-c h3{font-size:27px}
+ .soc-row .btn{flex:1;justify-content:center;padding:0 12px}
+ .q summary{font-size:17.5px}
+}
+</style></head><body><header class="nav"><div class="wrap nav-in"><a class="logo" href="#top"><svg class="mk" viewBox="0 0 100 77.51" aria-hidden="true" fill="currentColor"><path d="M 88.93 77.51 L 77.51 77.51 L 37.09 0 L 62.91 0 Z"/><path d="M 95.58 77.51 L 87.03 77.51 L 77.99 0 L 100 0 Z"/><path d="M 78.70 77.51 L 66.56 77.51 L 0 0 L 25.86 0 Z"/></svg><b>Wick</b><span class="tk">$WICK</span></a><nav class="links"><a href="#launch">Launch</a><a href="#why">Why $WICK</a><a href="#pnl">PnL cards</a><a href="#buy">How to buy</a><a href="#faq">FAQ</a></nav><a class="btn nav-cta" href="#community">Join the community</a></div></header><section class="hero" id="top"><div class="hero-art"><img src="img/obsidian.webp" alt="Gold $WICK coins standing on a black studio floor"></div><div class="wrap hero-in"><div class="hero-copy"><div class="eyebrow"><i class="dot"></i>Token launch · Solana</div><h1>The coin with a <em>working product</em> behind it.</h1><p class="lead">$WICK is the community token of Wick, the app that runs a trading strategy on your own broker account and posts every trade to a public record before the result.</p><div class="ctas"><a class="btn gold" href="#community">Join the community <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="#buy">How to buy</a></div><div class="ca"><span class="ca-l">CA</span><span class="ca-v">Revealed at launch</span><button class="ca-b" data-copy="" aria-label="Copy contract address"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9.5" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></button></div></div></div><div class="wrap"><div class="facts"><div class="fact"><span>Ticker</span><b>$WICK</b></div><div class="fact"><span>Chain</span><b>Solana</b></div><div class="fact"><span>TGE</span><b>In a few days</b></div><div class="fact"><span>Contract</span><b>At launch</b></div></div></div></section><section class="sec trk" id="launch"><div class="wrap"><div class="eyebrow">Launch tracker</div><h2>The road to TGE</h2><div class="bar"><i></i></div><ol class="steps"><li class="step done"><div class="st-top"><span class="st-n">01</span><span class="chip done">Done</span></div><h3>Announcement</h3><p>Big news went out to the whole community.</p></li><li class="step live"><div class="st-top"><span class="st-n">02</span><span class="chip live">Live now</span></div><h3>Community bounty</h3><p>First 100 to like, follow, repost and comment on the pinned post get rewards.</p></li><li class="step live"><div class="st-top"><span class="st-n">03</span><span class="chip live">Live now</span></div><h3>Creator contest</h3><p>Top 50 image and video creators get rewarded and featured.</p></li><li class="step soon"><div class="st-top"><span class="st-n">04</span><span class="chip soon">Soon</span></div><h3>TGE on Solana</h3><p>Token goes live in a few days. The contract address goes up here and on our X.</p></li></ol></div></section><section class="sec why" id="why"><div class="wrap why-in"><div class="why-head"><div class="eyebrow">Why $WICK</div><h2>Not another empty coin.</h2><p class="lead">A coin is only as strong as what stands behind it. Here is what stands behind $WICK.</p></div><div class="why-rows"><div class="why-row"><span class="why-n">01</span><span class="why-ic"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></svg></span><div><h3>A product that already works</h3><p>Wick is live at app.wickrecord.com. $WICK grows around a real app, not a promise of one.</p></div></div><div class="why-row"><span class="why-n">02</span><span class="why-ic"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 19 6v5.5c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><div><h3>Proof you can check</h3><p>Every Wick trade is posted to a public record before it closes. Wins and losses. No edits, no deleting.</p></div></div><div class="why-row"><span class="why-n">03</span><span class="why-ic"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M3 19.5c0-3.3 2.7-6 6-6s6 2.7 6 6M15.5 5.6a3.3 3.3 0 0 1 0 6.1M17.5 13.8c2 .7 3.5 2.9 3.5 5.7"/></svg></span><div><h3>Community first</h3><p>Bounty and creator rewards go out before TGE. The people who show up early get remembered.</p></div></div></div></div></section><section class="sec pnl" id="pnl"><div class="wrap pnl-in side"><div class="pnl-copy"><div class="eyebrow">Share cards</div><h2>PnL cards that can't be faked.</h2><p class="lead">Every closed trade turns into a share card pulled straight from the public record. Each one carries a QR code anyone can scan to check it.</p><ul class="pts"><li><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Posted before the result</span></li><li><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14 14h2v2M20 14v6h-6v-2M17 17h0"/></svg><span>Scan the QR to verify</span></li><li><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 19 6v5.5c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg><span>Wins and losses, same card</span></li></ul></div><div class="pnl-art"><img class="pnl-wide" src="img/pnl-15-gold.webp" alt="Wick PnL share card with the mascot and gold coins"><div class="pnl-pair"><img src="img/pnl-14-gold.webp" alt="Wick PnL card with the mascot"><img class="pnl-port" src="img/pnl-11-gold.webp" alt="Portrait Wick PnL card"></div><p class="note">Sample cards. Real ones come straight from the live record.</p></div></div></section><section class="sec masc"><div class="wrap"><div class="masc-in"><div class="masc-art"><img src="img/mascot.webp" alt="The Wick candle mascot in sunglasses holding a gold coin"></div><div class="masc-copy"><div class="eyebrow">The mascot</div><h2>Meet the face of $WICK.</h2><p class="lead">He holds the flame, holds the coin, and the glasses never come off. You will see him on every sticker, meme and PnL card.</p></div></div></div></section><section class="sec tok" id="tokenomics"><div class="wrap tok-in"><div class="tok-copy"><div class="eyebrow">Tokenomics</div><h2>Published before launch.</h2><p class="lead">Full numbers go up with the contract, before anyone can buy.</p><div class="tok-table"><div class="tok-row"><span>Total supply</span><b><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>Before TGE</b></div><div class="tok-row"><span>Allocation</span><b><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>Before TGE</b></div><div class="tok-row"><span>Team vesting</span><b><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>Before TGE</b></div><div class="tok-row"><span>Liquidity</span><b><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg>Before TGE</b></div></div></div><div class="tok-art"><img src="img/gold-front.webp" alt="The $WICK coin"></div></div></section><section class="sec buy" id="buy"><div class="wrap"><div class="eyebrow">After TGE</div><h2>How to buy $WICK</h2><ol class="buy-g"><li class="buy-c"><div class="buy-top"><span class="buy-n">1</span><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5a2 2 0 0 1 2-2h11.5v3M4 7.5v10a2 2 0 0 0 2 2h14v-11H6a2 2 0 0 1-2-2z"/><circle cx="16.5" cy="14" r="1.2"/></svg></div><h3>Get a Solana wallet</h3><p>Download Phantom or Solflare on your phone and save your recovery phrase offline.</p></li><li class="buy-c"><div class="buy-top"><span class="buy-n">2</span><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="9" cy="7" rx="5.5" ry="2.5"/><path d="M3.5 7v4c0 1.4 2.5 2.5 5.5 2.5s5.5-1.1 5.5-2.5V7"/><path d="M9.5 16.3c.9 1.3 3.2 2.2 6 2.2 3 0 5.5-1.1 5.5-2.5v-4c0-1.2-1.8-2.2-4.3-2.4"/></svg></div><h3>Add SOL</h3><p>Buy SOL on an exchange you trust and send it to your new wallet.</p></li><li class="buy-c"><div class="buy-top"><span class="buy-n">3</span><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="11" height="11" rx="2.5"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/></svg></div><h3>Copy the official address</h3><p>Only from this page or our official X. Never from a DM.</p></li><li class="buy-c"><div class="buy-top"><span class="buy-n">4</span><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h13l-3.5-3.5M19 15H6l3.5 3.5"/></svg></div><h3>Swap for $WICK</h3><p>Open Jupiter in your wallet, paste the address and swap.</p></li></ol><div class="warn"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 19 6v5.5c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg><span>Only trust the contract address on this page and on our official X. We will never DM you first.</span></div></div></section><section class="sec com" id="community"><div class="wrap"><div class="eyebrow">Join before TGE</div><h2>Get in early.</h2><div class="camp-g"><article class="camp-c"><div class="camp-top"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.3"/><path d="M3 19.5c0-3.3 2.7-6 6-6s6 2.7 6 6M15.5 5.6a3.3 3.3 0 0 1 0 6.1M17.5 13.8c2 .7 3.5 2.9 3.5 5.7"/></svg><span class="chip live">Live now</span></div><span class="camp-k">First 100 people</span><h3>Community bounty</h3><p>Like, follow, repost and comment on our pinned post. The first 100 to do all four get exclusive rewards.</p><a class="lnk" href="#community">See the pinned post <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="camp-c"><div class="camp-top"><svg class="ic" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="6" width="12" height="12" rx="2.5"/><path d="m15.5 10.5 5-3v9l-5-3"/></svg><span class="chip live">Live now</span></div><span class="camp-k">Top 50 creators</span><h3>Creator contest</h3><p>Post an image or video about Wick, tag us, and drop your Solana wallet address. The best 50 get rewarded and featured before TGE.</p><a class="lnk" href="#community">See the pinned post <svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article></div><div class="soc-row"><a class="btn soc" href="#community">Follow on X<svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn soc" href="#community">Join Telegram<svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn soc" href="#community">Join WhatsApp<svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="sec faq" id="faq"><div class="wrap faq-in"><div><div class="eyebrow">FAQ</div><h2>Questions people ask.</h2></div><div class="qs"><details class="q" open><summary><span>When is TGE?</span><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>In a few days. The exact date and time go out on our official X first, so turn on notifications.</p></details><details class="q"><summary><span>Where do I get the contract address?</span><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Only on this page and our official X, at launch. Anyone sending you an address before TGE is not us.</p></details><details class="q"><summary><span>Which chain is $WICK on?</span><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Solana. You need a Solana wallet like Phantom or Solflare to hold it.</p></details><details class="q"><summary><span>What is Wick?</span><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>An app that runs a trading strategy on your own broker account. Your money stays in your account, and every trade is posted to a public record before the result.</p></details><details class="q"><summary><span>Is this financial advice?</span><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No. Crypto prices move fast and can go to zero. Only put in what you can afford to lose.</p></details></div></div></section><footer class="foot"><div class="wrap"><div class="foot-top"><a class="logo" href="#top"><svg class="mk" viewBox="0 0 100 77.51" aria-hidden="true" fill="currentColor"><path d="M 88.93 77.51 L 77.51 77.51 L 37.09 0 L 62.91 0 Z"/><path d="M 95.58 77.51 L 87.03 77.51 L 77.99 0 L 100 0 Z"/><path d="M 78.70 77.51 L 66.56 77.51 L 0 0 L 25.86 0 Z"/></svg><b>Wick</b><span class="tk">$WICK</span></a><nav class="foot-links"><a href="https://app.wickrecord.com">Wick app</a><a href="https://wickrecord.com">Public record</a><a href="#community">X</a><a href="#community">Telegram</a><a href="#community">WhatsApp</a></nav></div><p class="disc">$WICK is a community token. Nothing on this page is financial advice. Crypto prices are volatile and you can lose all of what you put in. Always check the contract address on our official channels.</p><div class="foot-bot"><span>Wick is built by Pathforge Limited.</span><span>© 2026 Wick</span></div></div></footer><script>
+document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
+var t=b.getAttribute('data-copy'); if(!t){b.classList.add('nudge');setTimeout(function(){b.classList.remove('nudge')},600);return;}
+try{navigator.clipboard.writeText(t)}catch(e){}});});
+</script></body></html>
